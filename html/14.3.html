@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>计算器</title>
+		<style type="text/css">
+			#input {
+				width: 410px;
+				height: 60px;
+				font-size: 50px;
+				text-align: right;
+			}
+			td{
+				width: 60px;
+				height: 60px;
+				margin-top: 2px;
+				margin-left: 2px;
+			}
+				
+			.button{
+				font-size: 50px;
+				width: 100px;
+				height: 100px;
+			}
+		</style>
+		<script type="text/javascript">
+			function inputStr(e){
+				input.value = input.value  + e.value;
+			}
+			function run(){
+				var val = eval(input.value);
+				if(val == "Infinity"){//除0错误（如8/0）
+					alert("错误");
+					return;
+				}
+				input.value = val;
+			}
+			function ce(){
+				input.value = "";
+			}
+			function back(){
+				input.value = input.value.substring(0,input.value.length-1);
+			}
+		</script>
+	</head>
+	<body>
+		<input type="text" id="input" value="" readonly="readonly"/>
+		<table border="0" cellspacing="" cellpadding="">
+			<tr>
+				<td><input type="button" class="button" name="" onclick="inputStr(this)"  id="" value="1" /></td>
+				<td><input type="button" class="button" name="" onclick="inputStr(this)" id="" value="2" /></td>
+				<td><input type="button" class="button" name="" onclick="inputStr(this)" id="" value="3" /></td>
+				<td><input type="button" class="button" name="" onclick="inputStr(this)" id="" value="+" /></td>
+			</tr>
+			<tr>
+				<td><input type="button" class="button" name="" onclick="inputStr(this)" id="" value="4" /></td>
+				<td><input type="button" class="button" name="" onclick="inputStr(this)" id="" value="5" /></td>
+				<td><input type="button" class="button" name="" onclick="inputStr(this)" id="" value="6" /></td>
+				<td><input type="button" class="button" name="" onclick="inputStr(this)" id="" value="-" /></td>
+			</tr>
+			<tr>
+				<td><input type="button" class="button" name="" onclick="inputStr(this)" id="" value="7" /></td>
+				<td><input type="button" class="button" name="" onclick="inputStr(this)" id="" value="8" /></td>
+				<td><input type="button" class="button" name="" onclick="inputStr(this)" id="" value="9" /></td>
+				<td><input type="button" class="button" name="" onclick="inputStr(this)" id="" value="*" /></td>
+			</tr>
+			<tr>
+				<td><input type="button" class="button" name="" onclick="inputStr(this)" id="" value="." /></td>
+				<td><input type="button" class="button" name="" onclick="inputStr(this)" id="" value="0" /></td>
+				<td><input type="button" class="button" name="" onclick="run()" id="" value="=" /></td>
+				<td><input type="button" class="button" name="" onclick="inputStr(this)" id="" value="/" /></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><input type="button" class="button" name="" onclick="ce()" id="" value="CE" /></td>
+				<td><input type="button" class="button" name="" onclick="back()" id="" value="<-" /></td>
+			</tr>
+		</table>
+
+	</body>
+</html>

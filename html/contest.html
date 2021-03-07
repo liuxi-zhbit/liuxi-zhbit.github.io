@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>比赛</title>
+		<link href="../bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+		
+		<link rel="stylesheet" type="text/css" href="../css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/contest_css.css"/>
+	</head>
+	<body>
+		<!-- nav -->
+		<nav class="navbar" id="nav">
+			<div class="inner-width">
+				<a href="#" class="logo"></a>
+				<div class="navbar-menu">
+					<a href="../index.html">首页</a>
+					<a href="study.html">学习</a>
+					<a href="contest.html">比赛</a>
+					<a href="information.html">资料</a>
+					<a href="about.html">关于</a>
+					<a href="data.html">个人中心</a>
+				</div>
+			</div>
+		</nav>
+		<div id="context" class="contest_bg">
+			<div class="title">
+				<br>
+				<p class="h1">开始测试</p>
+				<div class="hr_normal"></div>
+			</div>
+			<div class="root">
+				<div class="item item1">
+					<div class="box-img">
+						<img src="../img/study/1.jpg" class="box-img">
+					</div>
+					
+					<div class="back">
+					<p class="h3">HTML小测</p>
+					<div class="hr_normal"></div>
+					<button type="button" id="html_seq" class="test_bnt btn btn-info" onclick="html_testing(this)">顺序练习</button>
+					<button type="button" id="html_ran" class="test_bnt btn btn-info" onclick="html_testing(this)">随机测试</button>
+					</div>
+				</div>
+				
+				
+				<div class="item item2">
+					<div class="box-img">
+						<img src="../img/study/2.jpg" >
+					</div>
+					<div class="back">
+						<p class="h3">CSS小测</p>
+						<div class="hr_normal"></div>
+						<button type="button" id="css_seq" class="test_bnt btn btn-info" onclick="css_testing(this)">顺序练习</button>
+						<button type="button" id="css_ran" class="test_bnt btn btn-info" onclick="css_testing(this)">随机测试</button>
+					</div>
+				</div>
+				
+				
+				
+				<div class="item item3">
+					<div class="box-img">
+						<img src="../img/study/3.jpg" class="box-img">
+						
+					</div>
+					
+					<div class="back">
+						<p class="h3">Javascript小测</p>
+						<div class="hr_normal"></div>
+						<button type="button" id="js_seq" class="test_bnt btn btn-info" onclick="js_testing(this)">顺序练习</button>
+						<button type="button" id="js_ran" class="test_bnt btn btn-info" onclick="js_testing(this)">随机测试</button>
+					</div>
+				</div>
+				
+				
+				
+			</div>
+			
+		</div>
+		
+	</body>
+	<div id="qu">
+		<div class="row">
+			<div class="col-lg-6">
+				
+			</div>
+			<div class="col-lg-6">
+				<button type="button" id="be" class="close_bnt btn btn-primary" onclick="befo(this)">上一题</button>
+				<button type="button" id="ne" class="close_bnt btn btn-primary" onclick="next(this)">下一题</button>
+				<button type="button" id="ex" class="close_bnt btn btn-primary" onclick="exit_qu()">退出</button>
+				
+			</div>
+			<div id="qu_root">
+				<div id="qu_box">
+					
+				</div>
+			</div>
+		</div>
+		
+	</div>
+	<script src="../js/jquery-2.0.3.min.js"></script>
+	<script src="../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+	<script src="../js/contest_js.js" type="text/javascript" charset="utf-8"></script>
+</html>

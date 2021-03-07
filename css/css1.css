@@ -1,0 +1,72 @@
+#logo{
+	height: 100px;
+	width: 100%;
+	background-color: aqua;
+}
+#nav{
+	height: 20px;
+	width: 100%;
+	background-color: antiquewhite;
+}
+#nei{
+	height: 500px;
+	width: 100%;
+}
+#footer{
+	height: 20px;
+	width: 100%;
+	background-color: yellow;
+}
+#left{
+	height: 100%;
+	width: 30%;
+	float: left;
+}
+#center{
+	height: 100%;
+	width: 40%;
+	float: left;
+}
+#right{
+	height: 100%;
+	width: 30%;
+	float: left;
+}
+#leftt1{
+	height: 25%;
+	width: 100%;
+	background-color: #00FFFF;
+}
+#leftt2{
+	height: 25%;
+	width: 100%;
+	background-color: aquamarine;
+}
+#leftd1{
+	height: 25%;
+	width: 100%;
+	background-color: aqua;
+}
+#leftd2{
+	height: 25%;
+	width: 100%;
+	background-color: blue;
+}
+#c1{
+	height: 40%;
+	background-color: chartreuse;
+}
+#c2{
+	height: 60%;
+	background-color: green;
+}
+#r1{
+	height: 30%;
+	width: 100%;
+	background-color: #00FFFF;
+}
+#r2{
+	height: 70%;
+	width: 100%;
+	background-color: brown;
+}

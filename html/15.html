@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>用户注册页面</title>
+		<style type="text/css">
+			strong {
+				color:red;
+				font-style:bolder;
+			}
+			fieldset {
+				width:560px;
+				height:186px;
+				padding:0px 50px;
+			}
+			#button {
+				margin:10px 20px;
+			}
+		</style>
+		<script type="text/javascript">
+			function $(id){return document.getElementById(id);}
+			function checkReg(){
+				var username = $("myname").value;
+				var pwd = $("mypwd1").value;
+				var pwdConfirm = $("mypwd2").value;
+				var checkright = true;
+				if(username == "" || pwd == "")//两者中由一个是空
+				{
+					alert("请确认用户名和密码输入是否正确！！");
+					checkright = false;
+				}else //不为空，再判断用户名和密码的长度合法性
+				{
+					if(username.length < 6){
+						alert("用户名长度太短，至少6个字符!!");
+						checkright = false;
+					}else if(pwd.length < 6){
+						alert("密码长度太短，至少6个字符！！");
+						checkright = false;
+					}else if(pwd != pwdConfirm){
+						alert("两次输入的密码必须一致！！");
+						checkright = false;
+					}else{
+						checkright = true;
+					}
+				}
+				return checkright;
+			}
+			function clearInfo(){
+				var flag = confirm("确认要重置数据吗？");
+				if(flag == true){
+					$("myname").value = "";
+					$("mypwd1").value = "";
+					$("mypwd2").value = "";
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<form action="" method="post" onsubmit="return checkReg()" onreset="clearInfo()">
+			<fieldset id="">
+				<legend>新用户注册</legend>
+				<lable>用&nbsp;户&nbsp;名：</lable>
+				<input type="text" name="myname" id="myname" value="" />
+				<strong>(用户名要大于6位)</strong><br>
+				<lable>登录密码：</lable>
+				<input type="password" name="mypwd1" id="mypwd1" value="" />
+				<strong>(密码要大于6位)</strong><br>
+				<lable>密码确认：</lable>
+				<input type="password" name="mypwd2" id="mypwd2" value="" /><br>
+				<input type="submit" name="" id="button" value="用户注册" />
+				<input type="reset" name="" id="button" value="重置" />
+			</fieldset>
+		</form>
+	</body>
+</html>

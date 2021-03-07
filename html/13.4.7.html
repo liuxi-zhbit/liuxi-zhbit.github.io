@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表单新增input类型的应用</title>
+</head>
+
+<body>
+    <fieldset>
+        <legend>新增其他input类型</legend>
+        <form action="">
+            设置颜色：<input type="text" name="color1"><input type="color" name="color2" oninput="color1.value=color2.value"><br> 输入邮箱：
+            <input type="email"><br> 站内搜索：
+            <input type="search"><br> 电话号码：
+            <input type="tel"><br> 个人主页：
+            <input type="url"><br> 年龄: <input type="range" min="1" max="120" name="age" oninput="age_num.value=age.value">
+            <output name="age_num" for="age"></output><br> 期望薪酬：
+            <input type="number" min="2500" max="10000" step="100" value="2500"><br>
+            <input type="submit" value="提交"><input type="reset" value="重置">
+        </form>
+    </fieldset>
+</body>
+
+</html>

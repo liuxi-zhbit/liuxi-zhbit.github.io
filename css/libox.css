@@ -1,0 +1,18 @@
+*{
+	font-family: 楷体;
+	color: blue;
+}
+#li1{
+	font-style: italic;
+	font-family: 黑体;
+	font-size: 24px;
+	font-weight: bold;
+}
+#li2{
+	background: #9999cc;
+	letter-spacing: 1px;
+}
+#li3{
+	font-size: 18px;
+	color: red;
+}

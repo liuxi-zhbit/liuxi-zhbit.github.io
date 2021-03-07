@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>文本编辑器</title>
+		<style type="text/css">
+			#ta{
+				width: 300px;
+				font-size: 2em;
+				border: #000000 solid 1px;
+			}
+			#ta{
+				width: 500px;
+				height: 150px;
+			}
+			#sel{
+				font-size: 40px;
+				width: 80px;
+				height: 50px;
+			}
+			.button{
+				font-size: 30px;
+				width: 60px;
+				height: 50px;
+			}
+		</style>
+		<script type="text/javascript">
+			function B(){
+				ta.style.fontWeight = ta.style.fontWeight == 'bolder' ? 'normal' : 'bolder';
+			}
+			function I(){
+				ta.style.fontStyle = ta.style.fontStyle == 'italic' ? 'normal' : 'italic';
+			}
+			function updata(){
+				var index = sel.selectedIndex;
+				ta.style.fontSize=sel.options[index].value*2+"px";
+			}
+		</script>
+	</head>
+	<body>
+			<form action="" method="post">
+				<textarea rows="7" cols="25" id="ta">something here</textarea><br>
+				
+			</form>
+			<select onchange="updata()" id="sel">
+				<option value="16">10</option>
+				<option value="18">12</option>
+				<option value="20">14</option>
+				<option value="22">16</option>
+				<option value="24">18</option>
+				<option value="26">20</option>
+				<option value="28">22</option>
+			</select>
+			<input type="button" onclick="B()" class="button" value="B" />
+			<input type="button" onclick="I()" class="button" value="I" />
+	</body>
+</html>

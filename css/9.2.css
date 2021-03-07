@@ -1,0 +1,17 @@
+img {
+	float: left;
+	border: 1px dashed gray;
+	margin: 10px 10px 10px 0;
+	padding: 5px;
+}
+
+span {
+	font-size: 3em;
+	float: left;
+}
+
+h1 {
+	text-align: center;
+	color: white;
+	background: #678;
+}

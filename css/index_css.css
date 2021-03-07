@@ -1,0 +1,88 @@
+
+#home{
+	height: 100vh;
+	min-height: 500px;
+	background: url(../img/index/bg.png) no-repeat center;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+#home .inner-width{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	text-align: center;
+}
+
+#home .content{
+	width: 100%;
+	color: #FFFFFF;
+}
+
+#home .content h1{
+	font-size: 60px;
+	margin-bottom: 60px;
+}
+#home .content h1::after{
+	content: "欢迎来到 caker judge 主站";
+	animation: textanim 10s linear infinite;
+}
+
+@keyframes textanim{
+	33%{
+		content: "生活原本沉闷，但跑起来就会有风";
+	}
+	66%{
+		content: "百年终日醉，也只三万六千场";
+	}
+}
+
+ .sm{
+	margin: 0 100px;
+	transition: .2s linear;
+}
+/*
+.sm a:hover{
+	color: #0099FF;
+} */
+
+#home .buttons{
+	margin-top: 20px;
+}
+
+#home .buttons a{
+	display: inline-block;
+	margin: 15px 30px;
+	color: #FFFFFF;
+	font-size: 15px;
+	font-weight: 500;
+	width: 100px;
+	border: 1px solid #FFFFFF;
+	padding: 14px 0;
+	border-radius: 6px;
+	transition: .2s linear;
+}
+
+#home .buttons a:hover{
+	background-color: #0099FF;
+	border: 1px solid #0099FF;
+}
+
+
+.sim{
+	margin: 15px 0;
+	height: 70px;
+	width: 70px;
+}
+
+#index_context{
+	background-color: #FFFFFF;
+	width: 70%;
+	height: auto;
+	text-align: center;
+	transform: translateX(15%);
+}
+
+
+

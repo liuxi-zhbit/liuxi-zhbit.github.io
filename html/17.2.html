@@ -1,0 +1,52 @@
+<html lang="en">
+	<head>
+		<meta charset="UTE-8">
+		<title>HTML5拖放图像</title>
+		<style type="text/css">
+			#div1,#div2{
+				float: left;
+				width: 200px;
+				height: 200px;
+				margin: 15px;
+				padding: 15px;
+				border: 1px dashed #0066ff;
+			}
+
+			#drag1 {
+				width: 200px;
+				height: 200px;
+			}
+		</style>
+
+		<script type="text/javascript">
+			function $(id) {
+				return document.getElementById(id);
+			}
+
+			function allowDrop(ev) {
+				ev.preventDefault();
+			}
+
+			function drag(ev) {
+				ev.dataTransfer.setData("Text", ev.target.id);
+			}
+
+			function drop(ev) {
+				ev.preventDefault();
+				var data = ev.dataTransfer.getData("Text");
+				ev.target.appendChild($(data));
+			}
+		</script>
+
+	</head>
+
+	<body>
+
+		<h3>两个div中图像互相拖放</h3>
+		<hr>
+		<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+			<img src="../img/cup.jpg" draggable="true" ondragstart="drag(event)" id="drag1" />
+		</div>
+		<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+		</htm1>
+	</body>

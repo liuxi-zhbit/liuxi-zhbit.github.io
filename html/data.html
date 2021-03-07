@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>个人中心</title>
+
+		<link href="../bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+
+		<link rel="stylesheet" type="text/css" href="../css/common.css" />
+		<link rel="stylesheet" type="text/css" href="../css/data.css" />
+	</head>
+	<body>
+		<!-- login -->
+		<div id="login_bg">
+
+			<div id="login_box">
+				<p class="h1">登录</p>
+
+				<form>
+					<div class="item">
+						<img src="../img/data/yonghuming.png">
+						<input type="text" id="username_input" placeholder="Username..">
+					</div>
+					<div class="item">
+						<img src="../img/data/mima.png">
+						<input type="password" id="password_input" placeholder="Password.." />
+					</div>
+					<input type="button" class="but" onclick="login()" value="登录" /><br>
+					<input type="button" class="but" onclick="login_hidden()" value="游客登录" />
+				</form>
+
+			</div>
+		</div>
+		<!-- nav -->
+		<nav class="navbar" id="nav">
+			<div class="inner-width">
+				<a href="#" class="logo"></a>
+				<div class="navbar-menu">
+					<a href="../index.html">首页</a>
+					<a href="study.html">学习</a>
+					<a href="contest.html">比赛</a>
+					<a href="information.html">资料</a>
+					<a href="about.html">关于</a>
+					<a href="data.html">个人中心</a>
+				</div>
+			</div>
+		</nav>
+		<div id="context" class="filter">
+			<div class="row">
+				<div class="col-lg-3 guanli" id="guan">
+					<img src="../img/data/pro1.jpg" class="img_box" id="img_box">
+					<br><br>
+					<div>
+						<button type="button" class="btn btn-default change_bnt" id="b1" onclick="change('jiben')">基本信息</button>
+					</div>
+					<div>
+						<button type="button" class="btn btn-default change_bnt" id="b2" onclick="change('pro')">头像管理</button>
+					</div>
+					<div>
+						<button type="button" class="btn btn-default change_bnt" id="b3" onclick="change('mima')">密码管理</button>
+					</div>
+					<div>
+						<button type="button" class="btn btn-default change_bnt" id="b4" onclick="change('other')">其他设置</button>
+					</div>
+				</div>
+
+				<div class="col-lg-9" id="root">
+					<div class="row" id="jiben">
+						<div class="row">
+							<div class="col-lg-9">
+								<p>基本信息</p>
+							</div>
+							<div class="col-lg-3">
+								<button type="button" class="btn btn-primary" onclick="change_info(this)">修改信息</button>
+							</div>
+						</div>
+						<div class="row">
+							<div class="hr_normal"></div>
+							<br><br>
+						</div>
+						<div class="row">
+							<div class="col-lg-3">
+								<p>姓名&nbsp;&nbsp;:</p>
+							</div>
+							<div class="col-lg-9 write" >
+								张三
+							</div>
+						</div>
+						<br>
+						<div class="row">
+							<div class="col-lg-3">
+								<p>学号&nbsp;&nbsp;:</p>
+							</div>
+							<div class="col-lg-9 write" >
+								02013
+							</div>
+						</div>
+						<br>
+						<div class="row">
+							<div class="col-lg-3">
+								<p>学校&nbsp;&nbsp;:</p>
+							</div>
+							<div class="col-lg-9 write" >
+								北京理工大学珠海学院
+							</div>
+						</div>
+						<br>
+						<div class="row">
+							<div class="col-lg-3">
+								<p>性别&nbsp;&nbsp;:</p>
+							</div>
+							<div class="col-lg-3">
+								<form class="disabled">
+									<input type="radio" name="sex" value="male" checked="checked" class="disabled" disabled>&nbsp;&nbsp;男&nbsp;&nbsp;&nbsp;&nbsp;
+									<input type="radio" name="sex" value="female" class="disabled" disabled>&nbsp;&nbsp;女
+								</form>
+							</div>
+
+						</div>
+					</div>
+					
+					
+					<div class="row" id="pro">
+						<div class="row">
+							<div class="col-lg-9">
+								<p>头像管理</p>
+							</div>
+							<div class="col-lg-3">
+								<button type="button" class="btn btn-primary disabled" id="img_change_btn" onclick="change_pro()">修改信息</button>
+							</div>
+						</div>
+						<div class="row">
+							<div class="hr_normal"></div>
+							<br><br>
+						</div>
+						<div class="row">
+							<div class="col-lg-6">
+								<img src="../img/data/pro1.jpg" class="img_change" id="show">
+							</div>
+							<div class="col-lg-3">
+								<form method="post" enctype="multipart/form-data">
+									<input type="file" id="img_input" accept="image/gif, image/jpeg, image/png, image/jpg">
+								</form>
+								<br />
+								<p id="img_info">
+								</p>
+							</div>
+						</div>
+					</div>
+					
+					
+					<div class="row" id="mima">
+						<div class="row">
+							<div class="col-lg-9">
+								<p>密码管理</p>
+							</div>
+							<div class="col-lg-3">
+								<button type="button" class="btn btn-primary" id="mima_change_btn" onclick="change_mima()">修改信息</button>
+							</div>
+						</div>
+						<div class="row">
+							<div class="hr_normal"></div>
+							<br><br>
+						</div>
+						<div class="row">
+							<form class="form-horizontal">
+							  <div class="form-group">
+							    <label for="inputPassword3" class="col-sm-2 control-label">原  密  码</label>
+							    <div class="col-sm-10">
+							      <input type="password" class="form-control" id="inputPassword1" placeholder="Password">
+							    </div>
+							  </div>
+							  <div class="form-group">
+							    <label for="inputPassword3" class="col-sm-2 control-label">新  密  码</label>
+							    <div class="col-sm-10">
+							      <input type="password" class="form-control" id="inputPassword2" placeholder="Password">
+							    </div>
+							  </div>
+							  <div class="form-group">
+							    <label for="inputPassword3" class="col-sm-2 control-label">确认新密码</label>
+							    <div class="col-sm-10">
+							      <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+							    </div>
+							  </div>
+							</form>
+						</div>
+					</div>
+					
+					
+					
+					<div class="row" id="other">
+						<div class="row">
+							<div class="col-lg-9">
+								<p>其他信息</p>
+							</div>
+							<div class="col-lg-3">
+								<button type="button" class="btn btn-primary">修改信息</button>
+							</div>
+						</div>
+						<div class="row">
+							<div class="hr_normal"></div>
+							<br><br>
+							<button type="button" class="btn btn-primary" onclick="user_insert()">注册账号</button>
+							<button type="button" class="btn btn-primary" onclick="questions_insert()">导入题库</button>
+						</div>
+					</div>
+				</div>
+
+
+			</div>
+		</div>
+
+	</body>
+	<script src="../js/jquery-2.0.3.min.js"></script>
+	<script src="../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+	<script src="../js/data_js.js" type="text/javascript" charset="utf-8"></script>
+</html>

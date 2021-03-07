@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			var n=0,win=0;
+			var x=new Array("liu","liang","su","tian");
+			function ran(){
+				var s="";
+				var num=3;
+				var ans=0;
+				while(num--){
+					var i=Math.floor(Math.random()*9)+1;
+					if(i==8){
+						ans=1;
+						win++;
+					}
+					s+=i;
+				}
+				n++;
+				s+="\n"
+				s+=ans==1?"赢\n":"输\n";
+				s+="玩了"+n+"次 "+" 赢"+win+"  胜率："+win/n*100+"%";
+				return confirm(s);
+			}
+			do{}while(ran());
+		</script>
+	</head>
+	<body>
+		<!--input type="button" onclick="ran()" value="按下变成百万富翁"/-->
+	</body>
+</html>

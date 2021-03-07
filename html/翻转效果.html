@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>钢铁侠-翻转分享卡片</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background: #999;
+        }
+        a{
+            text-decoration: none;
+        }
+        .middle{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        .box{
+            width: 340px;
+            height: 480px;
+        }
+        .box-img,.back{
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            position: absolute;
+            backface-visibility: hidden;
+            transition: 0.7s;
+        }
+        .box-img img{
+            width: 100%;
+        }
+        .back{
+            background: #fff;
+        }
+        .back-content{
+            text-align: center;
+            color: cornflowerblue;
+            width: 100%;
+        }
+        .back{
+            transform: perspective(600px) rotateY(180deg);
+        }
+        .box-img{
+            transform: perspective(600px) rotateY(0deg);
+        }
+        .box:hover .box-img{
+            transform: perspective(600px) rotateY(-180deg);
+        }
+        .box:hover .back{
+            transform: perspective(600px) rotateY(0deg);
+        }
+ 
+ 
+ 
+ 
+    </style>
+</head>
+<body>
+    <div class="box middle">
+        <div class="box-img">
+            <img src="../img/photo02.jpg" alt="">
+        </div>
+        <div class="back">
+            <div class="back-content middle">
+                <h2>I'm Iron Man</h2>
+                <span>I love u three thousand</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

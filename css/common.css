@@ -1,0 +1,103 @@
+*{
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	font-family: 微软雅黑;
+	box-sizing: border-box;
+}
+
+body{
+	background-color: #FAF9DE;
+}
+
+a{
+    text-decoration: none!important;
+}
+a:hover{
+text-decoration: none!important;
+}
+
+.navbar{
+	position: fixed;
+	background-color: #292c37;
+	width: 100%;
+	padding: 30px 0;
+	top: 0;
+	z-index: 999;
+	transition: .3s linear;
+}
+
+.sticky{
+	background-color: #FFFFFF;
+	padding: 10px 0;
+}
+
+.sticky .logo{
+	background: url(../img/index/logo_t.png);
+}
+
+.sticky .navbar-menu a{
+	color: #000000;
+}
+
+
+.inner-width{
+	max-width: 1300px;
+	margin: auto;
+	padding: 0 40px;
+}
+
+.navbar .inner-width{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.logo{
+	width: 345px;
+	height: 55px;
+	background-image: url(../img/index/logo.png);
+	background-size: auto;\
+}
+
+.navbar-menu a{
+	color: #FFFFFF;
+	font-size: 30px;
+	font-weight: 500;
+	margin-left: 30px;
+	transition: .2s linear;
+}
+
+.navbar-menu a:hover{
+	color: #0099FF;
+}
+
+#context{
+	padding: 60px;
+	background-color: #FFFFFF;
+	width: 70%;
+	position: absolute;
+	top: 115px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+#hr_top{
+	margin-top: 20px;
+	height: 5px;
+	width: 100%;
+	background-color: dimgray;
+}
+
+.hr_normal{
+	height: 1px;
+	width: 100%;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	background-color: dimgray;
+}
+
+.hidden{
+	display: none;
+	z-index: -1;
+}

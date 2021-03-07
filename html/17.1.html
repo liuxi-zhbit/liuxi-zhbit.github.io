@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>简易手机通讯录</title>
+		<script>
+			//保存一条通讯记录数据，同时显示在div中 
+        function $(id){return document.getElementById(id);}
+        function saveInfo(){
+            var name1=$("username").value;//取姓名
+            var phone1=$("userphone").value;    //取电话
+            if (name1!="" && phone1!="")  //不为空处理
+            {
+                localStorage.setItem(name1,phone1);
+                loadAllInfo();
+                alert("添加成功"); 
+				$("username").value="";//添加成功后置空
+				$("userphone").value="";    //添加成功后置空
+				$("username").focus();//获得焦点
+            }else{//姓名或电话为空，告警并获得焦点
+                alert("请输入姓名和电话！");
+                $("username").focus();
+            }             
+        }
+        //以姓名查找通讯录信息  
+        function findForName(){  
+            var searchname = $("username").value;  
+            var searchphone = localStorage.getItem(searchname); //取电话 
+            $("userphone").value=searchphone; //填充电话
+        }
+        //从localStorage中取出所有通讯录中信息，并展现到界面上
+        function loadAllInfo(){
+            // localStorage.clear();
+            var result = ""; 
+            if(localStorage.length>0){ 
+                result += "姓名&nbsp;&nbsp;&nbsp;&nbsp;电话\n";  
+                for(var i=0;i<localStorage.length;i++){  
+                    var name= localStorage.key(i);  
+                    var phone = localStorage.getItem(name);  
+                    result += name+"   ---   "+phone+"\n";  
+                }               
+                $("phoneset").innerHTML = result;  
+            }else{  
+                $("phoneset").innerHTML = "通讯录为空……";  
+            }  
+        }
+        //删除某一条通讯信息
+        function deleteName(){
+      $("userphone").readonly="readonly";
+            localStorage.removeItem($("username").value); //按姓名删除通讯录 
+			loadAllInfo();
+            $("userphone").value=""; //填充电话
+            $("username").value=""; //填充电话
+            $("username").focus(); //填充电话
+        }    
+    </script>
+	</head>
+	<body onload="loadAllInfo();">
+		<article style="width:350px;height:450px;text-align:center;border:12px groove #0099cc;margin:0 auto;padding:20px;">
+			<header>
+				<h3 style="background:#ededed;padding:10px auto;">手机通讯录管理器</h3>
+			</header>
+			<form method="post" action="">
+				<fieldset style="width:300px;text-align:center;">
+					<legend>简易手机通讯录</legend><label for="name">姓名：</label>
+					<input type="text" id="username" name="username" required /><br />
+					<label for="telphone">电话：</label>
+					<input type="text" id="userphone" name="userphone" required /><br />
+					<br><input type="button" onclick="saveInfo()" value="添加" />
+					<input type="button" onclick="findForName()" value="查询" />
+					<input type="button" onclick="deleteName()" value="删除" />
+					<input type="reset">
+			</form>
+			<div id="displayallinfo" name="displayallinfo">
+				<textarea name="" rows="8" cols="30" id="phoneset"></textarea>
+			</div>
+			</fieldset>
+			<footer style="background:#ededed;height:40px;">
+				<p><strong>前端工作室设计</strong><br>
+					<strong>版权所有&copy;，2017-2020</strong></p>
+			</footer>
+		</article>
+	</body>
+</html>
