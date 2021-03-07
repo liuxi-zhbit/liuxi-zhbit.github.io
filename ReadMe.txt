@@ -1,1 +1,2 @@
 网站使用了html+css对网站布局进行设置，用javascript处理网页的事件，综合利用了DOM对象设计页面模块显示的逻辑，部分网页布局还使用了bootstrap的栅格系统进行设计，也使用了bootstrap的一些样式对页面美化。
+修改了ReadMe文件
